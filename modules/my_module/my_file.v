@@ -3,7 +3,7 @@ module my_module
 pub const golden_ratio = 1.61803
 
 fn init() {
-	println('memory_management init...')	
+	println('my_module init...')	
 }
 
 struct User {

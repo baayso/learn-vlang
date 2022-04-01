@@ -2,11 +2,17 @@ module main
 
 import os
 import time
+import math
 import my_module as mymod
 
 fn main() {
 	println('text')
 	println(os.args)
+
+	println('math.min_i32 = ${math.min_i32}')
+	println('math.max_i32 = ${math.max_i32}')
+	println('math.min_i64 = ${math.min_i64}')
+	println('math.max_i64 = ${math.max_i64}')
 
 	println(add(77, 33))
 	println(sub(100, 50))
@@ -162,7 +168,18 @@ fn main() {
 
 	// 数组，其实是Slices
 	mut nums := [1, 2, 3]
-	println(nums) // [1, 2, 3]
+	println('nums : ${nums}') // [1, 2, 3]
+
+	println('nums == [1, 2, 3] : ${nums == [1, 2, 3]}')
+	println('[1, 2, 3] == [1, 2, 3] : ${[1, 2, 3] == [1, 2, 3]}')
+
+	palindrome_arr := [1, 2, 3, 3, 2, 1]
+	println('palindrome_arr : ${palindrome_arr}')
+
+	palindrome_array := palindrome_arr#[..-1]
+	println('palindrome_array : ${palindrome_array}')
+
+	println('palindrome_arr == palindrome_array : ${palindrome_arr == palindrome_array}')
 
 	nums << 4
 	println(nums) // [1, 2, 3, 4]
