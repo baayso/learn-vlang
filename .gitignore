@@ -1,4 +1,23 @@
 main
 learn-vlang
-*.so
+*.exe
+*.exe~
 *.dll
+*.so
+
+log
+logs
+*.log*
+
+# IntelliJ IDEA #
+*.ipr
+*.iws
+*.iml
+.idea
+out
+
+# Windows #
+Thumbs.db
+
+# Mac #
+.DS_Store
