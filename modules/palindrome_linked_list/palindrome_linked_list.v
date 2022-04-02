@@ -12,10 +12,8 @@ mut:
 fn is_palindrome_linked_list(head &ListNode) bool {
 	mut list := []int{}
 
-	mut p := head
-	for p != 0 {
+	for p := head; p != 0; p = p.next {
 		list << p.val
-		p = p.next
 	}
 
 	println('list = ${list}')
@@ -46,4 +44,8 @@ fn main() {
 	}
 
 	println(is_palindrome_linked_list(head))
+
+	unsafe {
+		free(head)
+	}
 }
