@@ -98,6 +98,13 @@ fn main() {
 	n := s4.int() // 42
 	println(n)
 
+	s5 := 'a'
+	nn := s5[0]
+	println('typeof(s5[0]).name = ${typeof(nn).name}')
+	println('s5[0] : ${nn}')
+	nnn := nn - 'a'[0]
+	println(nnn)
+
 	// all int literals are supported
 	assert '0xc3'.int() == 195
 	assert '0o10'.int() == 8
@@ -131,11 +138,11 @@ fn main() {
 
 	println('===========================================================')
 
-	// Runes
 	strings := 'Netherlands'
 	println(strings[0]) // Output: 78
 	println(strings[0].ascii_str()) // Output: N
 
+	// Runes
 	rocket := `🚀`
 	println(typeof(rocket).name) // rune
     // 使用 .str() 方法将 rune 转换为 UTF-8 字符串
